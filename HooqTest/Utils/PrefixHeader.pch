@@ -1,0 +1,19 @@
+//
+//  PrefixHeader.pch
+//  HooqTest
+//
+//  Created by Taufik Rohmat on 06/08/18.
+//  Copyright © 2018 Taufik Rohmat. All rights reserved.
+//
+
+#ifndef hooqtest_PrefixHeader_pch
+#define hooqtest_PrefixHeader_pch
+
+#import "Constant.h"
+#import "Utils.h"
+#import <AFNetworking/AFNetworking.h>
+#import <AFNetworking/AFNetworkActivityIndicatorManager.h>
+#import "SessionManager.h"
+#import <JSONModel/JSONModel.h>
+
+#endif /* PrefixHeader_pch */

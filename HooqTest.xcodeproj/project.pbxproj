@@ -1,0 +1,745 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		683F7AB5BDF4D3EF83492D85 /* Pods_HooqTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7C900F802D649C22C2DBC0 /* Pods_HooqTest.framework */; };
+		6E08909A2117E46F0018CC6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0890992117E46F0018CC6C /* AppDelegate.m */; };
+		6E0890A02117E46F0018CC6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E08909E2117E46F0018CC6C /* Main.storyboard */; };
+		6E0890A22117E4700018CC6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E0890A12117E4700018CC6C /* Assets.xcassets */; };
+		6E0890A52117E4710018CC6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E0890A32117E4710018CC6C /* LaunchScreen.storyboard */; };
+		6E0890A82117E4710018CC6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0890A72117E4710018CC6C /* main.m */; };
+		6E0890B22117E4710018CC6C /* HooqTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0890B12117E4710018CC6C /* HooqTestTests.m */; };
+		6E0890BD2117E4710018CC6C /* HooqTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0890BC2117E4710018CC6C /* HooqTestUITests.m */; };
+		6E0890CF2117E5200018CC6C /* SessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0890CE2117E5200018CC6C /* SessionManager.m */; };
+		6E0890D52117EAFD0018CC6C /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0890D42117EAFD0018CC6C /* Utils.m */; };
+		6E0890D82117EE490018CC6C /* HomeCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0890D72117EE490018CC6C /* HomeCollectionViewController.m */; };
+		6E0890DB2117EF2C0018CC6C /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0890DA2117EF2C0018CC6C /* Movie.m */; };
+		6E29B7052118133400731D95 /* MovieCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E29B7042118133400731D95 /* MovieCollectionViewCell.m */; };
+		6E29B70821181F6B00731D95 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E29B70721181F6B00731D95 /* DetailViewController.m */; };
+		6E29B70B2118238600731D95 /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E29B70A2118238600731D95 /* JSONValueTransformer.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6E0890AE2117E4710018CC6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E08908D2117E46F0018CC6C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E0890942117E46F0018CC6C;
+			remoteInfo = HooqTest;
+		};
+		6E0890B92117E4710018CC6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E08908D2117E46F0018CC6C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E0890942117E46F0018CC6C;
+			remoteInfo = HooqTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2F7031B0702EABB8DB2B1E68 /* Pods-HooqTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HooqTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HooqTest/Pods-HooqTest.debug.xcconfig"; sourceTree = "<group>"; };
+		6E0890952117E46F0018CC6C /* HooqTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HooqTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E0890982117E46F0018CC6C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6E0890992117E46F0018CC6C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6E08909F2117E46F0018CC6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6E0890A12117E4700018CC6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6E0890A42117E4710018CC6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6E0890A62117E4710018CC6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E0890A72117E4710018CC6C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6E0890AD2117E4710018CC6C /* HooqTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HooqTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E0890B12117E4710018CC6C /* HooqTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HooqTestTests.m; sourceTree = "<group>"; };
+		6E0890B32117E4710018CC6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E0890B82117E4710018CC6C /* HooqTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HooqTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E0890BC2117E4710018CC6C /* HooqTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HooqTestUITests.m; sourceTree = "<group>"; };
+		6E0890BE2117E4710018CC6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E0890CD2117E5200018CC6C /* SessionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SessionManager.h; sourceTree = "<group>"; };
+		6E0890CE2117E5200018CC6C /* SessionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SessionManager.m; sourceTree = "<group>"; };
+		6E0890D12117E8290018CC6C /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		6E0890D22117EA650018CC6C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		6E0890D32117EAFD0018CC6C /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		6E0890D42117EAFD0018CC6C /* Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		6E0890D62117EE490018CC6C /* HomeCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeCollectionViewController.h; sourceTree = "<group>"; };
+		6E0890D72117EE490018CC6C /* HomeCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionViewController.m; sourceTree = "<group>"; };
+		6E0890D92117EF2C0018CC6C /* Movie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		6E0890DA2117EF2C0018CC6C /* Movie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		6E29B7032118133400731D95 /* MovieCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieCollectionViewCell.h; sourceTree = "<group>"; };
+		6E29B7042118133400731D95 /* MovieCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieCollectionViewCell.m; sourceTree = "<group>"; };
+		6E29B70621181F6B00731D95 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		6E29B70721181F6B00731D95 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		6E29B7092118238600731D95 /* JSONValueTransformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSONValueTransformer.h; sourceTree = "<group>"; };
+		6E29B70A2118238600731D95 /* JSONValueTransformer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSONValueTransformer.m; sourceTree = "<group>"; };
+		CE7C900F802D649C22C2DBC0 /* Pods_HooqTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HooqTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA274310E7B3896D6FA7B0B5 /* Pods-HooqTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HooqTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-HooqTest/Pods-HooqTest.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6E0890922117E46F0018CC6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				683F7AB5BDF4D3EF83492D85 /* Pods_HooqTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E0890AA2117E4710018CC6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E0890B52117E4710018CC6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B798E4FFE8CAE59044F5DFD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2F7031B0702EABB8DB2B1E68 /* Pods-HooqTest.debug.xcconfig */,
+				DA274310E7B3896D6FA7B0B5 /* Pods-HooqTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6E08908C2117E46F0018CC6C = {
+			isa = PBXGroup;
+			children = (
+				6E0890972117E46F0018CC6C /* HooqTest */,
+				6E0890B02117E4710018CC6C /* HooqTestTests */,
+				6E0890BB2117E4710018CC6C /* HooqTestUITests */,
+				6E0890962117E46F0018CC6C /* Products */,
+				4B798E4FFE8CAE59044F5DFD /* Pods */,
+				E60968FDF683F243E443725E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6E0890962117E46F0018CC6C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6E0890952117E46F0018CC6C /* HooqTest.app */,
+				6E0890AD2117E4710018CC6C /* HooqTestTests.xctest */,
+				6E0890B82117E4710018CC6C /* HooqTestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6E0890972117E46F0018CC6C /* HooqTest */ = {
+			isa = PBXGroup;
+			children = (
+				6E0890CA2117E5130018CC6C /* Model */,
+				6E0890CC2117E5130018CC6C /* Utils */,
+				6E0890CB2117E5130018CC6C /* View Controller */,
+				6E0890982117E46F0018CC6C /* AppDelegate.h */,
+				6E0890992117E46F0018CC6C /* AppDelegate.m */,
+				6E08909E2117E46F0018CC6C /* Main.storyboard */,
+				6E0890A12117E4700018CC6C /* Assets.xcassets */,
+				6E0890A32117E4710018CC6C /* LaunchScreen.storyboard */,
+				6E0890A62117E4710018CC6C /* Info.plist */,
+				6E0890A72117E4710018CC6C /* main.m */,
+			);
+			path = HooqTest;
+			sourceTree = "<group>";
+		};
+		6E0890B02117E4710018CC6C /* HooqTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				6E0890B12117E4710018CC6C /* HooqTestTests.m */,
+				6E0890B32117E4710018CC6C /* Info.plist */,
+			);
+			path = HooqTestTests;
+			sourceTree = "<group>";
+		};
+		6E0890BB2117E4710018CC6C /* HooqTestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6E0890BC2117E4710018CC6C /* HooqTestUITests.m */,
+				6E0890BE2117E4710018CC6C /* Info.plist */,
+			);
+			path = HooqTestUITests;
+			sourceTree = "<group>";
+		};
+		6E0890CA2117E5130018CC6C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6E0890D92117EF2C0018CC6C /* Movie.h */,
+				6E0890DA2117EF2C0018CC6C /* Movie.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6E0890CB2117E5130018CC6C /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6E29B6FC211812E900731D95 /* Custom View */,
+				6E0890D62117EE490018CC6C /* HomeCollectionViewController.h */,
+				6E0890D72117EE490018CC6C /* HomeCollectionViewController.m */,
+				6E29B70621181F6B00731D95 /* DetailViewController.h */,
+				6E29B70721181F6B00731D95 /* DetailViewController.m */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		6E0890CC2117E5130018CC6C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6E0890CD2117E5200018CC6C /* SessionManager.h */,
+				6E0890CE2117E5200018CC6C /* SessionManager.m */,
+				6E0890D12117E8290018CC6C /* Constant.h */,
+				6E0890D22117EA650018CC6C /* PrefixHeader.pch */,
+				6E0890D32117EAFD0018CC6C /* Utils.h */,
+				6E0890D42117EAFD0018CC6C /* Utils.m */,
+				6E29B7092118238600731D95 /* JSONValueTransformer.h */,
+				6E29B70A2118238600731D95 /* JSONValueTransformer.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		6E29B6FC211812E900731D95 /* Custom View */ = {
+			isa = PBXGroup;
+			children = (
+				6E29B7032118133400731D95 /* MovieCollectionViewCell.h */,
+				6E29B7042118133400731D95 /* MovieCollectionViewCell.m */,
+			);
+			path = "Custom View";
+			sourceTree = "<group>";
+		};
+		E60968FDF683F243E443725E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE7C900F802D649C22C2DBC0 /* Pods_HooqTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6E0890942117E46F0018CC6C /* HooqTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E0890C12117E4710018CC6C /* Build configuration list for PBXNativeTarget "HooqTest" */;
+			buildPhases = (
+				E876C44EAACE99FB6EB4FE9A /* [CP] Check Pods Manifest.lock */,
+				6E0890912117E46F0018CC6C /* Sources */,
+				6E0890922117E46F0018CC6C /* Frameworks */,
+				6E0890932117E46F0018CC6C /* Resources */,
+				2C746A684AD62A6B42773404 /* [CP] Embed Pods Frameworks */,
+				2A31DF6F2B840A9519CB4A08 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HooqTest;
+			productName = HooqTest;
+			productReference = 6E0890952117E46F0018CC6C /* HooqTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6E0890AC2117E4710018CC6C /* HooqTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E0890C42117E4710018CC6C /* Build configuration list for PBXNativeTarget "HooqTestTests" */;
+			buildPhases = (
+				6E0890A92117E4710018CC6C /* Sources */,
+				6E0890AA2117E4710018CC6C /* Frameworks */,
+				6E0890AB2117E4710018CC6C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E0890AF2117E4710018CC6C /* PBXTargetDependency */,
+			);
+			name = HooqTestTests;
+			productName = HooqTestTests;
+			productReference = 6E0890AD2117E4710018CC6C /* HooqTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6E0890B72117E4710018CC6C /* HooqTestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E0890C72117E4710018CC6C /* Build configuration list for PBXNativeTarget "HooqTestUITests" */;
+			buildPhases = (
+				6E0890B42117E4710018CC6C /* Sources */,
+				6E0890B52117E4710018CC6C /* Frameworks */,
+				6E0890B62117E4710018CC6C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E0890BA2117E4710018CC6C /* PBXTargetDependency */,
+			);
+			name = HooqTestUITests;
+			productName = HooqTestUITests;
+			productReference = 6E0890B82117E4710018CC6C /* HooqTestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6E08908D2117E46F0018CC6C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Taufik Rohmat";
+				TargetAttributes = {
+					6E0890942117E46F0018CC6C = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+					6E0890AC2117E4710018CC6C = {
+						CreatedOnToolsVersion = 9.3.1;
+						TestTargetID = 6E0890942117E46F0018CC6C;
+					};
+					6E0890B72117E4710018CC6C = {
+						CreatedOnToolsVersion = 9.3.1;
+						TestTargetID = 6E0890942117E46F0018CC6C;
+					};
+				};
+			};
+			buildConfigurationList = 6E0890902117E46F0018CC6C /* Build configuration list for PBXProject "HooqTest" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6E08908C2117E46F0018CC6C;
+			productRefGroup = 6E0890962117E46F0018CC6C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6E0890942117E46F0018CC6C /* HooqTest */,
+				6E0890AC2117E4710018CC6C /* HooqTestTests */,
+				6E0890B72117E4710018CC6C /* HooqTestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6E0890932117E46F0018CC6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E0890A52117E4710018CC6C /* LaunchScreen.storyboard in Resources */,
+				6E0890A22117E4700018CC6C /* Assets.xcassets in Resources */,
+				6E0890A02117E46F0018CC6C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E0890AB2117E4710018CC6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E0890B62117E4710018CC6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A31DF6F2B840A9519CB4A08 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HooqTest/Pods-HooqTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2C746A684AD62A6B42773404 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HooqTest/Pods-HooqTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworkActivityLogger/AFNetworkActivityLogger.framework",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/JSONModel/JSONModel.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworkActivityLogger.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONModel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HooqTest/Pods-HooqTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E876C44EAACE99FB6EB4FE9A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HooqTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6E0890912117E46F0018CC6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E0890DB2117EF2C0018CC6C /* Movie.m in Sources */,
+				6E0890CF2117E5200018CC6C /* SessionManager.m in Sources */,
+				6E29B70B2118238600731D95 /* JSONValueTransformer.m in Sources */,
+				6E0890A82117E4710018CC6C /* main.m in Sources */,
+				6E29B70821181F6B00731D95 /* DetailViewController.m in Sources */,
+				6E08909A2117E46F0018CC6C /* AppDelegate.m in Sources */,
+				6E0890D52117EAFD0018CC6C /* Utils.m in Sources */,
+				6E0890D82117EE490018CC6C /* HomeCollectionViewController.m in Sources */,
+				6E29B7052118133400731D95 /* MovieCollectionViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E0890A92117E4710018CC6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E0890B22117E4710018CC6C /* HooqTestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E0890B42117E4710018CC6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E0890BD2117E4710018CC6C /* HooqTestUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6E0890AF2117E4710018CC6C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E0890942117E46F0018CC6C /* HooqTest */;
+			targetProxy = 6E0890AE2117E4710018CC6C /* PBXContainerItemProxy */;
+		};
+		6E0890BA2117E4710018CC6C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E0890942117E46F0018CC6C /* HooqTest */;
+			targetProxy = 6E0890B92117E4710018CC6C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6E08909E2117E46F0018CC6C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E08909F2117E46F0018CC6C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6E0890A32117E4710018CC6C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E0890A42117E4710018CC6C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6E0890BF2117E4710018CC6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6E0890C02117E4710018CC6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6E0890C22117E4710018CC6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F7031B0702EABB8DB2B1E68 /* Pods-HooqTest.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/HooqTest/Utils/PrefixHeader.pch";
+				INFOPLIST_FILE = HooqTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.opikpun.HooqTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		6E0890C32117E4710018CC6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA274310E7B3896D6FA7B0B5 /* Pods-HooqTest.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/HooqTest/Utils/PrefixHeader.pch";
+				INFOPLIST_FILE = HooqTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.opikpun.HooqTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		6E0890C52117E4710018CC6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HooqTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.opikpun.HooqTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HooqTest.app/HooqTest";
+			};
+			name = Debug;
+		};
+		6E0890C62117E4710018CC6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HooqTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.opikpun.HooqTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HooqTest.app/HooqTest";
+			};
+			name = Release;
+		};
+		6E0890C82117E4710018CC6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HooqTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.opikpun.HooqTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HooqTest;
+			};
+			name = Debug;
+		};
+		6E0890C92117E4710018CC6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HooqTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.opikpun.HooqTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HooqTest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6E0890902117E46F0018CC6C /* Build configuration list for PBXProject "HooqTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E0890BF2117E4710018CC6C /* Debug */,
+				6E0890C02117E4710018CC6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E0890C12117E4710018CC6C /* Build configuration list for PBXNativeTarget "HooqTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E0890C22117E4710018CC6C /* Debug */,
+				6E0890C32117E4710018CC6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E0890C42117E4710018CC6C /* Build configuration list for PBXNativeTarget "HooqTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E0890C52117E4710018CC6C /* Debug */,
+				6E0890C62117E4710018CC6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E0890C72117E4710018CC6C /* Build configuration list for PBXNativeTarget "HooqTestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E0890C82117E4710018CC6C /* Debug */,
+				6E0890C92117E4710018CC6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6E08908D2117E46F0018CC6C /* Project object */;
+}
