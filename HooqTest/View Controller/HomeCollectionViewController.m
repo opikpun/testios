@@ -13,14 +13,12 @@
 #import "DetailViewController.h"
 
 @interface HomeCollectionViewController ()<UICollectionViewDelegateFlowLayout, UICollectionViewDataSourcePrefetching>{
-    NSMutableArray *listMovie;
     CGSize sizeCollection;
     NSInteger totalPage;
     NSInteger currentPage;
     Movie *selectedMovie;
-    BOOL onLoadData;
-    
     UIRefreshControl *refreshControl;
+    NSMutableArray *listMovie;
 }
 
 @end
@@ -34,7 +32,6 @@ static NSString * const reuseIdentifier = @"MovieCell";
     
     // Uncomment the following line to preserve selection between presentations
      self.clearsSelectionOnViewWillAppear = NO;
-    
     
     //add pull to load refresh
     refreshControl = [[UIRefreshControl alloc]init];
@@ -121,8 +118,8 @@ static NSString * const reuseIdentifier = @"MovieCell";
 - (void)collectionView:(UICollectionView *)collectionView prefetchItemsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths{
    
     NSIndexPath *lastIndex = indexPaths.lastObject;
-    if(lastIndex.row == listMovie.count-1 && !onLoadData){
-        [self loadMovie];
+    if(lastIndex.row == listMovie.count-1 ){
+        [self callAPINowPlayingMovie];
     }
 }
 
@@ -134,27 +131,33 @@ static NSString * const reuseIdentifier = @"MovieCell";
     listMovie = [[NSMutableArray alloc]init];
     currentPage = 0;
     totalPage = 0;
-    [self loadMovie];
+    [self callAPINowPlayingMovie];
 }
 
-- (void)loadMovie{
+- (void)callAPINowPlayingMovie{
     currentPage++;
     if(currentPage == totalPage){
         return;
     }
-    onLoadData = true;
-    [[SessionManager sharedManager]GET:NOW_PLAYING_URL parameters:@{@"page":@(currentPage)} success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
-        self->onLoadData = false;
-        NSArray *results = responseObject[@"results"];
-        for(NSDictionary *movieDict in results){
-            [self->listMovie addObject:[[Movie alloc]initWithDictionary:movieDict error:nil]];
-        }
-        self->totalPage = [responseObject[@"total_pages"]integerValue];
+    [self loadMovie:currentPage completion:^(NSArray *movieList, NSUInteger totalPage) {
+        [self->listMovie addObjectsFromArray:movieList];
+        self->totalPage = totalPage;
         [self.collectionView reloadData];
         [self->refreshControl endRefreshing];
+    }];
+}
+
+- (void)loadMovie:(NSUInteger)page completion:(void (^)(NSArray* movieList, NSUInteger totalPage))completion{
+    [[SessionManager sharedManager]GET:NOW_PLAYING_URL parameters:@{@"page":@(page)} success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+        NSArray *results = responseObject[@"results"];
+        NSMutableArray *movies = [[NSMutableArray alloc]init];
+        for(NSDictionary *movieDict in results){
+            [movies addObject:[[Movie alloc]initWithDictionary:movieDict error:nil]];
+        }
+        completion(movies, [responseObject[@"total_pages"]integerValue]);
         
     } failure:^(NSError *error, NSDictionary *responseObject) {
-        
+        completion(nil, 0);
     }];
 }
 

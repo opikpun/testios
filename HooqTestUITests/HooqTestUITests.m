@@ -32,9 +32,18 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // Use recording to get started writing UI tests.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testNavigationUI {
+    
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    [[[[app.collectionViews childrenMatchingType:XCUIElementTypeCell] elementBoundByIndex:4] childrenMatchingType:XCUIElementTypeOther].element tap];
+    
+    XCUIElementQuery *collectionViewsQuery = app.scrollViews.otherElements.collectionViews;
+    [[[[collectionViewsQuery childrenMatchingType:XCUIElementTypeCell] elementBoundByIndex:2] childrenMatchingType:XCUIElementTypeOther].element tap];
+    [[[[collectionViewsQuery childrenMatchingType:XCUIElementTypeCell] elementBoundByIndex:1] childrenMatchingType:XCUIElementTypeOther].element tap];
+    [app.navigationBars.buttons[@"Back"] tap];
+    [app.navigationBars.buttons[@"Back"] tap];
+    [app.navigationBars.buttons[@"Back"] tap];
+
 }
 
 @end

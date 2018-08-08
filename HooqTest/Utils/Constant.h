@@ -12,7 +12,6 @@
 
 #define BASE_URL @"https://api.themoviedb.org/3/"
 #define IMAGE_URL @"https://image.tmdb.org/t/p/"
-#define API_URL [NSString stringWithFormat:@"%@/api/", BASE_URL]
 #define API_KEY_IMDB @"bbf0dad367e90819abfe49a65cb586ed"
 
 #define NOW_PLAYING_URL [NSString stringWithFormat:@"%@movie/now_playing?api_key=%@", BASE_URL, API_KEY_IMDB]

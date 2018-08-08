@@ -99,6 +99,7 @@ static NSString * const reuseIdentifier = @"MovieCell";
     Movie *relatedMovie = listRelatedMovie[indexPath.row];
     DetailViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"detailVC"];
     [vc setMovie:relatedMovie];
+    NSLog(@"called detail");
     [self.navigationController pushViewController:vc animated:YES];
 }
 
