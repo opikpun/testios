@@ -9,6 +9,9 @@
 #import <XCTest/XCTest.h>
 #import "HomeCollectionViewController.h"
 #import "Constant.h"
+#import "Movie.h"
+#import "MovieCollectionViewCell.h"
+#import "SessionManager.h"
 
 @interface HooqTestTests : XCTestCase
 
@@ -18,9 +21,8 @@
 
 @interface HomeCollectionViewController (HooqTestTests)
 
-@property (nonatomic, retain) NSMutableArray *listMovie;
-
 - (void)loadMovie:(NSUInteger)page completion:(void (^)(NSArray* movieList, NSUInteger totalPage))completion;
+- (void)refreshAndLoadData;
 @end
 
 @implementation HooqTestTests
@@ -28,8 +30,14 @@
 - (void)setUp {
     [super setUp];
     
-    _homeVC = [[HomeCollectionViewController alloc]init];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:NSBundle.mainBundle];
+    UINavigationController *navVC =  [storyboard instantiateViewControllerWithIdentifier:@"navVC"];
+    _homeVC = (HomeCollectionViewController *) navVC.topViewController;
+ 
+    UIApplication.sharedApplication.keyWindow.rootViewController = _homeVC;
+    
+    XCTAssertNotNil(navVC.view);
+    XCTAssertNotNil(_homeVC.view);
 }
 
 - (void)tearDown {
@@ -60,5 +68,41 @@
     
     XCTAssertEqualObjects(expectedURL, nowPlayingURL);
 }
+
+- (void)testIfColorCorrect{
+    UIColor *expectedColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
+    
+    UIColor *resultColor = UIColorFromRGB(0xFFFFFF);
+    
+    XCTAssert(CGColorEqualToColor(expectedColor.CGColor, resultColor.CGColor));
+}
+
+- (void)testCollectionViewMovieImage{
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Handler called"];
+    [[SessionManager manager]GET:NOW_PLAYING_URL parameters:@{@"page":@(1)} success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSArray *results = responseObject[@"results"];
+        NSMutableArray *movies = [[NSMutableArray alloc]init];
+        for(NSDictionary *movieDict in results){
+            [movies addObject:[[Movie alloc]initWithDictionary:movieDict error:nil]];
+        }
+        
+        [expectation fulfill];
+        
+        
+        
+        NSArray *cells = self->_homeVC.collectionView.visibleCells;
+        
+        for(int i = 0; i < cells.count; i++){
+            MovieCollectionViewCell *cell = cells[i];
+            Movie *movie = movies[i];
+            XCTAssertEqualObjects([cell.imagePoster.image accessibilityIdentifier], movie.posterPath);
+        }
+    } failure:^(NSError *error, NSDictionary *responseObject) {
+        
+    }];
+    
+    [self waitForExpectationsWithTimeout:5.0 handler:nil];
+}
+
 
 @end

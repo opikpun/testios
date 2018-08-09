@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43064EC8A9A20BA0BAE6F87E /* Pods_HooqTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9B59FCF3C7FBD7B49553F9 /* Pods_HooqTestTests.framework */; };
 		683F7AB5BDF4D3EF83492D85 /* Pods_HooqTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7C900F802D649C22C2DBC0 /* Pods_HooqTest.framework */; };
 		6E08909A2117E46F0018CC6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0890992117E46F0018CC6C /* AppDelegate.m */; };
 		6E0890A02117E46F0018CC6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E08909E2117E46F0018CC6C /* Main.storyboard */; };
@@ -43,6 +44,9 @@
 
 /* Begin PBXFileReference section */
 		2F7031B0702EABB8DB2B1E68 /* Pods-HooqTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HooqTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HooqTest/Pods-HooqTest.debug.xcconfig"; sourceTree = "<group>"; };
+		4A9B59FCF3C7FBD7B49553F9 /* Pods_HooqTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HooqTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B757811E55B18FE110831DC /* Pods-HooqTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HooqTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HooqTestTests/Pods-HooqTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		51F7C4AE2E266ED5AE66DF72 /* Pods-HooqTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HooqTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HooqTestTests/Pods-HooqTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		6E0890952117E46F0018CC6C /* HooqTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HooqTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E0890982117E46F0018CC6C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6E0890992117E46F0018CC6C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -90,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43064EC8A9A20BA0BAE6F87E /* Pods_HooqTestTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +113,8 @@
 			children = (
 				2F7031B0702EABB8DB2B1E68 /* Pods-HooqTest.debug.xcconfig */,
 				DA274310E7B3896D6FA7B0B5 /* Pods-HooqTest.release.xcconfig */,
+				4B757811E55B18FE110831DC /* Pods-HooqTestTests.debug.xcconfig */,
+				51F7C4AE2E266ED5AE66DF72 /* Pods-HooqTestTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -218,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				CE7C900F802D649C22C2DBC0 /* Pods_HooqTest.framework */,
+				4A9B59FCF3C7FBD7B49553F9 /* Pods_HooqTestTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -249,9 +257,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E0890C42117E4710018CC6C /* Build configuration list for PBXNativeTarget "HooqTestTests" */;
 			buildPhases = (
+				DA925D0933AD6A252B796D66 /* [CP] Check Pods Manifest.lock */,
 				6E0890A92117E4710018CC6C /* Sources */,
 				6E0890AA2117E4710018CC6C /* Frameworks */,
 				6E0890AB2117E4710018CC6C /* Resources */,
+				81519D9F5FDE47D645BF96CD /* [CP] Embed Pods Frameworks */,
+				23A91F98F8628D3257BC499B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -351,6 +362,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		23A91F98F8628D3257BC499B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HooqTestTests/Pods-HooqTestTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2A31DF6F2B840A9519CB4A08 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -390,6 +416,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HooqTest/Pods-HooqTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81519D9F5FDE47D645BF96CD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HooqTestTests/Pods-HooqTestTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA925D0933AD6A252B796D66 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HooqTestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E876C44EAACE99FB6EB4FE9A /* [CP] Check Pods Manifest.lock */ = {
@@ -599,10 +658,7 @@
 				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HooqTest/Utils/PrefixHeader.pch";
 				INFOPLIST_FILE = HooqTest/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.opikpun.HooqTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -619,10 +675,7 @@
 				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HooqTest/Utils/PrefixHeader.pch";
 				INFOPLIST_FILE = HooqTest/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.opikpun.HooqTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -632,15 +685,12 @@
 		};
 		6E0890C52117E4710018CC6C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B757811E55B18FE110831DC /* Pods-HooqTestTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HooqTestTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.opikpun.HooqTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -650,15 +700,12 @@
 		};
 		6E0890C62117E4710018CC6C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51F7C4AE2E266ED5AE66DF72 /* Pods-HooqTestTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HooqTestTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.opikpun.HooqTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -671,11 +718,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HooqTestUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.opikpun.HooqTestUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -688,11 +731,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HooqTestUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.opikpun.HooqTestUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

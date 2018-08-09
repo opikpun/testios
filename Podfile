@@ -6,4 +6,8 @@ target 'HooqTest' do
 	pod 'SVProgressHUD'
 	pod 'AFNetworkActivityLogger'
     pod 'JSONModel'
+    
+    target 'HooqTestTests' do
+        inherit! :search_paths
+    end
 end

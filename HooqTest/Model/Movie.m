@@ -15,4 +15,10 @@
     return [JSONKeyMapper mapperForSnakeCase];
 }
 
+- (id)initWithPosterPath:(NSString *)path{
+    if ( self = [super init] ) {
+        self.posterPath = path;
+    }
+    return self;
+}
 @end

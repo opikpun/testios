@@ -6,5 +6,7 @@
 //  Copyright © 2018 Taufik Rohmat. All rights reserved.
 //
 
+#import <JSONModel/JSONModel.h>
+
 @interface JSONValueTransformer (CustomTransformer)
 @end

@@ -14,6 +14,5 @@
 #import <AFNetworking/AFNetworking.h>
 #import <AFNetworking/AFNetworkActivityIndicatorManager.h>
 #import "SessionManager.h"
-#import <JSONModel/JSONModel.h>
 
 #endif /* PrefixHeader_pch */

@@ -92,6 +92,7 @@ static NSString * const reuseIdentifier = @"MovieCell";
     
     Movie *movie = listMovie[indexPath.row];
     [cell.imagePoster setImageWithURL:[NSURL URLWithString:SMALL_IMAGE_URL(movie.posterPath)]];
+    [cell.imagePoster.image setAccessibilityIdentifier:movie.posterPath];
     cell.layer.shadowRadius  = 1.5f;
     cell.layer.shadowColor   = UIColor.lightGrayColor.CGColor;
     cell.layer.shadowOffset  = CGSizeMake(0.0f, 0.0f);

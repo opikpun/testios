@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <JSONModel/JSONModel.h>
 
 @interface Movie : JSONModel
 
@@ -25,6 +26,7 @@
 @property (nonatomic) NSString<Optional> *voteAverage;
 @property (nonatomic) int voteCount;
 
+- (id)initWithPosterPath:(NSString *)path;
 
 @end
 
